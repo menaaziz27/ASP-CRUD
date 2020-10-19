@@ -1,0 +1,57 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@model ProductsManagemnetSystem.Models.MyProducts
+
+
+<h1>Hello from Edit page</h1>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="ProductId" />
+    <div class="col-6">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div>
+            <label asp-for="Name" class="control-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label asp-for="Category" class="control-label"></label>
+            <input asp-for="Category" class="form-control" />
+            <span asp-validation-for="Category" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label asp-for="Color" class="control-label"></label>
+            <input asp-for="Color" class="form-control" />
+            <span asp-validation-for="Color" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label asp-for="Price" class="control-label"></label>
+            <input asp-for="Price" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label asp-for="AvailableQuantity" class="control-label"></label>
+            <input asp-for="AvailableQuantity" class="form-control" />
+            <span asp-validation-for="AvailableQuantity" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label asp-for="ImageFile" class="control-label"></label>
+            <input asp-for="ImageFile" class="form-control" />
+            <span asp-validation-for="ImageFile" class="text-danger"></span>
+        </div>
+        <div class="row ml-1 mt-1">
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </div>
+    </div>
+</form>

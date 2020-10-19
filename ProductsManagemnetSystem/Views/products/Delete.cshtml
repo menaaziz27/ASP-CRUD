@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model ProductsManagemnetSystem.Models.MyProducts
+<h1>Delete</h1>
+<h3>Are you sure you want to delete this?</h3>
+
+<dl class="row">
+    <dt class="col-1">@Html.DisplayNameFor(pro => Model.Name)</dt>
+    <dd class="col-11">@Html.DisplayFor(pro => Model.Name)</dd>
+
+    <dt class="col-1">@Html.DisplayNameFor(pro => Model.Category)</dt>
+    <dd class="col-11">@Html.DisplayFor(pro => Model.Category)</dd>
+
+    <dt class="col-1">@Html.DisplayNameFor(pro => Model.Color)</dt>
+    <dd class="col-11">@Html.DisplayFor(pro => Model.Color)</dd>
+
+    <dt class="col-1">@Html.DisplayNameFor(pro => Model.Price)</dt>
+    <dd class="col-11">@Html.DisplayFor(pro => Model.Price)</dd>
+
+    <dt class="col-1">@Html.DisplayNameFor(pro => Model.AvailableQuantity)</dt>
+    <dd class="col-11">@Html.DisplayFor(pro => Model.AvailableQuantity)</dd>
+
+
+</dl>
+<br />
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="ProductId" />
+    <input type="submit" value="Delete" class="btn btn-danger" />
+</form>
+
+<a asp-action="Index">Back to List</a>
